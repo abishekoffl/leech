@@ -29,12 +29,12 @@ def stats(update, context):
     cpuUsage = psutil.cpu_percent(interval=0.5)
     memory = psutil.virtual_memory().percent
     disk = psutil.disk_usage('/').percent
-    stats = f'<b>╭─────────「  ⭕️ BOT STATISTICS ⭕️  」</b>\n' \
+    stats = f'<b>╭───「  ⭕️ BOT STATISTICS ⭕️  」</b>\n' \
             f'<b>│</b>\n' \
             f'<b>├  ⏰ Bot Uptime : {currentTime}</b>\n' \
-            f'<b>├  💾 Total Disk Space : {total}</b>\n' \
+            f'<b>├  💾 Total Disk Space : Unlimited </b>\n' \
             f'<b>├  📀 Total Used Space : {used}</b>\n' \
-            f'<b>├  💿 Total Free Space : {free}</b>\n' \
+            f'<b>├  💿 Total Free Space : Unlimited </b>\n' \
             f'<b>├  🔼 Total Upload : {sent}</b>\n' \
             f'<b>├  🔽 Total Download : {recv}</b>\n' \
             f'<b>├  🖥️ CPU : {cpuUsage}%</b>\n' \
@@ -51,7 +51,7 @@ def start(update, context):
 Hi {update.message.chat.first_name}, This bot can mirror all your links to Google drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
-    update.effective_message.reply_photo("https://telegra.ph/file/019996f816db9ed576cff.jpg", start_string, parse_mode=ParseMode.MARKDOWN)
+    update.effective_message.reply_photo("https://telegra.ph/file/7831786d19b9b1d79b4a0.jpg", start_string, parse_mode=ParseMode.MARKDOWN)
 
 
 @run_async
